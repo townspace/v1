@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f6f0e4;
+  --foreground: #1f1722;
+  --surface: rgba(255, 250, 242, 0.78);
+  --surface-strong: rgba(255, 250, 242, 0.92);
+  --border: rgba(77, 55, 52, 0.16);
+  --muted: #685961;
+  --accent: #c4602f;
+  --accent-deep: #8f3426;
+  --teal: #1f7a7a;
+  --gold: #e8b84b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), sans-serif;
+  background-image:
+    radial-gradient(circle at top left, rgba(196, 96, 47, 0.18), transparent 32%),
+    radial-gradient(circle at top right, rgba(31, 122, 122, 0.16), transparent 28%),
+    linear-gradient(180deg, #f9f3e9 0%, #f3ecdf 36%, #efe6d6 100%);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(196, 96, 47, 0.22);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    background: var(--surface);
+    backdrop-filter: blur(18px);
+    border: 1px solid var(--border);
+    box-shadow: 0 24px 60px rgba(66, 38, 34, 0.1);
+  }
+
+  .section-grid {
+    background-image:
+      linear-gradient(rgba(93, 76, 78, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(93, 76, 78, 0.08) 1px, transparent 1px);
+    background-position: center;
+    background-size: 28px 28px;
+  }
+}
